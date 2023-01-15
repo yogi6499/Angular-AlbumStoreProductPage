@@ -6,7 +6,6 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class ProductService {
-  private __albumUrl='../assets/album.json';
 
   constructor(private _http: Http) { }
   public getAlbum(id:number){
