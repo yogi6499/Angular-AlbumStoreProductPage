@@ -6,12 +6,12 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class ProductService {
-  private __albumUrl= '../assets/album.json';
+  private _albumUrl= '../assets/album.json';
 
   constructor(private _http: Http) { }
-  public getAlbum(id: number){
-    return this._http.get(this.__albumUrl).map((response => {
-      this.__albumUrl=response.json();
-    }));
+  getAlbum(id: number){
+    return this._http.get(this._albumUrl).map((response) => 
+      response.json());
+    
   }
 }
