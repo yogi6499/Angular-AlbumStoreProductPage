@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 export class ProductService {
 
   constructor(private _http: Http) { }
-  __albumUrl:string='../assets/album.json';
+  public __albumUrl:string='../assets/album.json';
   public getAlbum(id:number){
     this.__albumUrl= this._http.get(this.__albumUrl).map((response => {
       this.__albumUrl=response.json();
